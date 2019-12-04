@@ -7,9 +7,7 @@ import { resetBasket } from '../../redux';
 function Checkout() {   
     const dispatch = useDispatch(); 
     const completeOrder = useSelector(state => state.basket);    
-    const url = 'https://jsonplaceholder.typicode.com/users';    
-
-    console.log(completeOrder)
+    const url = 'https://jsonplaceholder.typicode.com/users';     
 
     const handelPurchase = () => {  
         fetch(url, {  
