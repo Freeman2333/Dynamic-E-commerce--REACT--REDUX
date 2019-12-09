@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux";
-import { Container, Col } from "react-bootstrap";
-import { Animated } from "react-animated-css";
+import { Container, Col } from "react-bootstrap"; 
 import Products from "../../data/products.json";
 import PLP from "./PLP";
 
@@ -22,11 +21,12 @@ const Home = () => {
   useEffect(() => { 
     fetchedProducts.forEach(p => {
       dispatch(addProduct(p));
-    });   
-  }, []);
+    });    
+    console.clear()  
+
+  }, [fetchedProducts, dispatch]);
  
-  return (
-    <Animated animationIn="pulse">
+  return ( 
       <Container className="d-flex justify-content-between flex-wrap">
         <Col xs={12} className="d-flex justify-content-center mt-4 bg-white">
           <h3>
@@ -45,8 +45,7 @@ const Home = () => {
             />
           </Col>
         ))}
-      </Container>
-    </Animated>
+      </Container> 
   );
 };
 

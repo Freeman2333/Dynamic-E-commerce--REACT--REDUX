@@ -11,9 +11,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/home/Home";
 import Checkout from "./components/home/Checkout";
-import ChatIcon from "./components/chat/ChatIcon";
+import ChatIcon from "./components/chat/ChatIcon"; 
 
-function App() {
+function App() {  
 
   return (
     <Provider store={store}>
