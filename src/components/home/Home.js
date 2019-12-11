@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux";
 import { Container, Col } from "react-bootstrap"; 
 import Products from "../../data/products.json";
-import PLP from "./PLP";
+import PLP from "./PLP"; 
 
 const Home = () => {
   const dispatch = useDispatch();  
@@ -42,9 +42,9 @@ const Home = () => {
               className="d-flex"
               key={item.SKU}
               product={item}
-            />
+            /> 
           </Col>
-        ))}
+        ))}  
       </Container> 
   );
 };
