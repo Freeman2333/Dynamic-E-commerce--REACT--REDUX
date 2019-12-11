@@ -26,7 +26,7 @@ function PLP(props) {
       <Card.Header>{item.name}</Card.Header>
       <Card.Body style={cardBody}>
         <Card.Text>
-          We have <b>{item.stock}</b> items of <b>{item.name}</b> in stock for <b>{item.price} kr</b> a piece. 
+          We have <b>{item.stock}</b> items of <b>{item.name}</b> in stock for <b>{item.price}kr</b> a piece. 
         </Card.Text>
         <small>{item.comment}</small> 
         <ButtonGroup className="d-flex flex-column mt-4" aria-label="Basic example">
