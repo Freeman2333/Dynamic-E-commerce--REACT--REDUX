@@ -5,7 +5,8 @@ const initProduct = {
   productArray: []
 };
 
-const productlistReducer = (state = initProduct, action) => { 
+const productlistReducer = (state = initProduct, action) => {  
+
   switch (action.type) {
     case ADD_PRODUCT:
       return {
@@ -15,9 +16,9 @@ const productlistReducer = (state = initProduct, action) => {
       };
     case DECREASE_PRODUCT_STOCK:
       return {
-        ...state,
+        ...state, 
         productArray: state.productArray.map(item => {
-          if(item.SKU === action.payload.SKU){ 
+          if(item.SKU === action.payload.SKU){  
             item.stock -= 1
           } return item
         }) 

@@ -1,9 +1,10 @@
 import { ADD_TO_BASKET, RESET_BASKET, ADD_TO_BASKET_ITEM } from "./basketlistType";
 
-export const addToBasket = product => {
+export const addToBasket = (product, amount) => {
   return {
     type: ADD_TO_BASKET ,
-    payload: product
+    payload: product,
+    bought: amount
   };
 };
 

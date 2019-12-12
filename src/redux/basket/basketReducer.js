@@ -3,17 +3,16 @@ import { ADD_TO_BASKET, RESET_BASKET, ADD_TO_BASKET_ITEM} from "./basketlistType
 const initOrder = {
   orderNumber: Math.floor(Math.random() * 100),
   numberOfUnits: 0,
-  unitArray: []
+  unitArray: [ ]
 };
 
-const basketlistReducer = (state = initOrder, action) => {  
-  localStorage.setItem("Basket", JSON.stringify(state.unitArray)); 
-   
+const basketlistReducer = (state = initOrder, action) => {   
+
   switch (action.type) {
     case ADD_TO_BASKET:
       return {
         ...state,
-        numberOfUnits: state.numberOfUnits + 1,
+        numberOfUnits: state.numberOfUnits + action.bought,
         unitArray: [...state.unitArray, action.payload]
       }; 
     case ADD_TO_BASKET_ITEM:
@@ -27,6 +26,7 @@ const basketlistReducer = (state = initOrder, action) => {
     default:
       return state;
   }
+  
 };
 
 export default basketlistReducer;

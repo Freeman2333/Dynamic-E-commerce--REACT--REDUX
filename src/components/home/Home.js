@@ -2,29 +2,37 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux";
 import { Container, Col } from "react-bootstrap"; 
+import { addToBasket} from "../../redux";
 import Products from "../../data/products.json";
 import PLP from "./PLP"; 
 
 const Home = () => {
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();   
+  const basket = useSelector(state => state.basket);  
+  const productList = useSelector(state => state.productList);  
+  const list = JSON.parse(localStorage.getItem("Basket"))
 
-  const productStateList = useSelector(
-    state => state.productList.productArray
-  );
+  console.log('basket',basket)
 
-  const productVariationAmount = useSelector(
-    state => state.productList.numberOfProducts
-  );  
+  const fetchedProducts = Products.products; 
+  const products = productList.productArray;
+  const productVariationAmount = productList.numberOfProducts;  
 
-  const fetchedProducts = Products.products;
- 
-  useEffect(() => { 
-    fetchedProducts.forEach(p => {
-      dispatch(addProduct(p));
-    });    
+  useEffect(() => {  
+    if(products.length === 0){
+      fetchedProducts.forEach(p => {
+        dispatch(addProduct(p));
+      });  
+    }
+            
+    if (list !== null && basket.unitArray.length === 0 && list.unitArray.length !== 0) {      
+      list.unitArray.forEach(prevProduct => {     
+        dispatch(addToBasket(prevProduct, prevProduct.purchasedUnits))  
+      }); 
+    }
+
     console.clear()  
-
-  }, [fetchedProducts, dispatch]);
+  }, [ fetchedProducts, dispatch ]);
  
   return ( 
       <Container className="d-flex justify-content-between flex-wrap">
@@ -33,7 +41,7 @@ const Home = () => {
             Choose between our <b>{productVariationAmount}</b> diffrent treats!{" "}
           </h3>
         </Col>
-        {productStateList.map((item, i) => (
+        {products.map((item, i) => (
           <Col key={i} xs={12} sm={6} md={4} className="d-flex">
             <PLP
               xs={12}

@@ -9,7 +9,7 @@ export const addProduct = product => {
 
 export const decreaseProductStock = product => { 
   return {
-    type: DECREASE_PRODUCT_STOCK,
+    type: DECREASE_PRODUCT_STOCK, 
     payload: product
   };
 };

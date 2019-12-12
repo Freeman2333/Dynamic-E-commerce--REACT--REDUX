@@ -1,25 +1,32 @@
-import React, { useState }  from "react";
+import React, { useEffect } from "react";
 import { Card, ButtonGroup, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { decreaseProductStock, addToBasket, addToBasketItem} from "../../redux";
+import { decreaseProductStock, addToBasket, addToBasketItem } from "../../redux";
 import PDP from "./PDP";
 
 function PLP(props) { 
   const dispatch = useDispatch();
-  const basketList = useSelector(state => state.basket);  
+  const basketList = useSelector(state => state.basket);    
   const item = props.product;  
- 
-  function handelDispatch(item) {
-    dispatch(decreaseProductStock(item))  
-    item.purchasedUnits++;
+  
+  const handelDispatch = (item) => {  
+    if(item.stock !== 0){  
+      dispatch(decreaseProductStock(item));
+      item.purchasedUnits += 1;
 
-    if(basketList.unitArray.includes(item)){ 
-      dispatch(addToBasketItem(item, item.SKU))    
-    }else {  
-      dispatch(addToBasket(item))   
+      (basketList.unitArray.includes(item)) ?
+        dispatch(addToBasketItem(item, item.SKU)) :
+        dispatch(addToBasket(item, 1))    
+
+    } else { 
+      alert('No stock available.')
     } 
   }  
-
+ 
+  useEffect(() => {  
+    localStorage.setItem("Basket", JSON.stringify(basketList)); 
+  }, [ basketList ]);
+  
   return (
     <Card className="text-center p-0 mt-4" style={{ width: "100%" }}>
       <Card.Img variant="top" style={imgCard} src={item.img} />

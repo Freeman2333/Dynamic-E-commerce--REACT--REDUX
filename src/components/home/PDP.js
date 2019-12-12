@@ -6,8 +6,7 @@ function PDP(props) {
     const [show, setShow] = useState(false); 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-  
-    console.log(props)
+   
     return (
       <>
         <Button className="mt-2" variant="light" onClick={handleShow}>

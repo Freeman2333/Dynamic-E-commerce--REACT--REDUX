@@ -5,7 +5,7 @@ function CheckoutItem(props) {
 
     return ( 
         <ListGroup.Item style={listItem}>
-            <p>{props.data.purchasedUnits}st : {props.data.name} - {props.data.price} kr </p> 
+            <p>{props.data.purchasedUnits}st : {props.data.name} - {props.data.price}kr </p> 
         </ListGroup.Item>
     )
 }
