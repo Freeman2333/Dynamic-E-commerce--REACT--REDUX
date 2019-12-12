@@ -10,9 +10,7 @@ const Home = () => {
   const dispatch = useDispatch();   
   const basket = useSelector(state => state.basket);  
   const productList = useSelector(state => state.productList);  
-  const list = JSON.parse(localStorage.getItem("Basket"))
-
-  console.log('basket',basket)
+  const list = JSON.parse(localStorage.getItem("Basket")) 
 
   const fetchedProducts = Products.products; 
   const products = productList.productArray;
