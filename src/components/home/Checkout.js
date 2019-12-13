@@ -16,7 +16,7 @@ function Checkout() {
         dispatch(resetBasket())
     }
 
-    const handelPurchase = () => {  
+    const handelPurchase = () => {    
         fetch(url, {  
             method: 'POST',  
             headers: {
@@ -28,6 +28,7 @@ function Checkout() {
         .then((res) => res.json())
         .then((json) => {
            console.log('Success', json);
+           alert('Your order has been sent!');
         })
         .catch (err => {
             alert('An error has occured: '+ err.message);

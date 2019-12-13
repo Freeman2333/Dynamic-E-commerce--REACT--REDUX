@@ -9,16 +9,18 @@ function PLP(props) {
   const basketList = useSelector(state => state.basket); 
   const products = useSelector(state => state.productList);    
   const item = props.product;   
+ 
+  const decreasingList = (item) => {
+    return products.productArray.map( el => {
+      if(el.SKU === item.SKU){  
+        el.stock -= 1
+      } return el
+    });
+  }
 
   const handelDispatches = (item) => {
     if(item.stock !== 0) {     
-      const decreaseProductList = products.productArray.map( el => {
-        if(el.SKU === item.SKU){  
-          el.stock -= 1
-        } return el
-      });
-
-      dispatch(decreaseProductStock(decreaseProductList));  
+      dispatch(decreaseProductStock(decreasingList(item)));  
       item.purchasedUnits += 1;
 
       (basketList.unitArray.includes(item)) ?
