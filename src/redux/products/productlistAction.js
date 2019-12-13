@@ -7,9 +7,9 @@ export const addProduct = product => {
   };
 };
 
-export const decreaseProductStock = product => { 
+export const decreaseProductStock = products => { 
   return {
     type: DECREASE_PRODUCT_STOCK, 
-    payload: product
+    payload: products
   };
 };

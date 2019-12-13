@@ -6,12 +6,19 @@ import PDP from "./PDP";
 
 function PLP(props) { 
   const dispatch = useDispatch();
-  const basketList = useSelector(state => state.basket);    
-  const item = props.product;  
-  
-  const handelDispatch = (item) => {  
-    if(item.stock !== 0){  
-      dispatch(decreaseProductStock(item));
+  const basketList = useSelector(state => state.basket); 
+  const products = useSelector(state => state.productList);    
+  const item = props.product;   
+
+  const handelDispatches = (item) => {
+    if(item.stock !== 0) {     
+      const decreaseProductList = products.productArray.map( el => {
+        if(el.SKU === item.SKU){  
+          el.stock -= 1
+        } return el
+      });
+
+      dispatch(decreaseProductStock(decreaseProductList));  
       item.purchasedUnits += 1;
 
       (basketList.unitArray.includes(item)) ?
@@ -41,7 +48,7 @@ function PLP(props) {
             className="font-weight-bold"
             variant="info"
             disabled= {item.stock === 0 ? true : false }
-            onClick={() => handelDispatch(item)}
+            onClick={() => handelDispatches(item)}
           >
             Buy a {item.name}
           </Button> 
