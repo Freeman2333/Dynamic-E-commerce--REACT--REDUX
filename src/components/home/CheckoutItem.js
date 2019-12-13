@@ -4,9 +4,11 @@ import { ListGroup } from 'react-bootstrap';
 function CheckoutItem(props) {   
 
     return ( 
-        <ListGroup.Item style={listItem}>
-            <p>{props.data.purchasedUnits}st : {props.data.name} - {props.data.price}kr </p> 
-        </ListGroup.Item>
+        <>
+            <ListGroup.Item style={listItem}>
+                <p>{props.data.purchasedUnits}st : {props.data.name} - {props.data.price}kr </p> 
+            </ListGroup.Item> 
+        </>
     )
 }
 

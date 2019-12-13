@@ -1,4 +1,5 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect }  from 'react'; 
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'; 
 import { Container, Card, Alert, ListGroup, Button} from 'react-bootstrap';  
 import CheckoutItem from './CheckoutItem';
@@ -57,8 +58,23 @@ function Checkout() {
                                    <CheckoutItem key={i} data={product}/>
                                 )) 
                             } 
-                            <Button className="d-flex justify-content-center col-12 m-2" variant="warning" onClick={handelReset}>Reset</Button>
-                            <Button className="d-flex justify-content-center col-12 m-2" variant="danger" onClick={handelPurchase}>Buy</Button>
+                            <Button className="d-flex justify-content-center col-12 m-2" 
+                                variant="warning" 
+                                onClick={handelReset}>
+                                    Reset
+                            </Button>
+                            <Button className="d-flex justify-content-center col-12 m-2" 
+                                variant="danger" 
+                                onClick={handelPurchase}>
+                                    Buy
+                            </Button>
+                            <Button className="d-flex justify-content-center col-12 m-2" 
+                                variant="light">
+                                    <NavLink className="text-decoration-none text-dark" 
+                                        to="/"> 
+                                            Continue Shopping 
+                                    </NavLink> 
+                            </Button> 
                         </ListGroup>   
                     }    
                 </Card.Body>  
