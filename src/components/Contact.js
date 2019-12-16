@@ -1,6 +1,7 @@
 import React from "react";
 import { Animated } from "react-animated-css";
 import { Container, Table } from "react-bootstrap";
+import BackHomeBtn from './home/button/BackHomeBtn';
 
 const Contact = () => {
   return (
@@ -49,8 +50,8 @@ const Contact = () => {
             </tr>
           </tbody>
         </Table>
-      </Animated>
-     
+      </Animated> 
+      <BackHomeBtn/> 
     </Container>
   );
 };

@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, DECREASE_PRODUCT_STOCK } from "./productlistType";
+import { ADD_PRODUCT, DECREASE_PRODUCT_STOCK, RESET_PRODUCTS } from "./productlistType";
 
 export const addProduct = product => {
   return {
@@ -7,9 +7,15 @@ export const addProduct = product => {
   };
 };
 
-export const decreaseProductStock = products => { 
+export const decreaseProductStock = decreasedList => { 
   return {
     type: DECREASE_PRODUCT_STOCK, 
-    payload: products
+    payload: decreasedList
+  };
+};
+
+export const resetProducts = () => {
+  return {
+    type: RESET_PRODUCTS
   };
 };

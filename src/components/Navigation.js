@@ -1,20 +1,17 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";  
+import { NavLink } from "react-router-dom";   
+import { Animated } from "react-animated-css"; 
 import { Navbar, Badge } from "react-bootstrap";
-import { Animated } from "react-animated-css";
 import { useSelector } from "react-redux";
 
- const Navigation = () => {  
-
-  const purchaseAmount = useSelector(
-    state => state.basket.numberOfUnits
-  );  
+ const Navigation = () => {    
+  const stateBasket = useSelector(state => state.basket);   
 
   return (
     <Navbar
       className="d-flex flex-wrap justify-content-between"
       bg="light"
-      style={{ minHeight: "70px" }}
+      style={{ minHeight: "100px" }}
     >
       <Animated animationIn="slideInDown">
         <h3 className="font-weight-bold">Online Bakery</h3>
@@ -31,12 +28,11 @@ import { useSelector } from "react-redux";
           Contact
         </NavLink>
         <NavLink className="text-dark text-decoration-none pr-3" to="/checkout">
-          <i
-            className="fa fa-lg fa-shopping-cart"
+          <i className="fa fa-lg fa-shopping-cart"
             style={{ color: "darkcyan" }}
           ></i>
           <Badge pill variant="info">
-           {purchaseAmount}
+            {stateBasket.numberOfUnits}
           </Badge>
         </NavLink>
       </Animated>

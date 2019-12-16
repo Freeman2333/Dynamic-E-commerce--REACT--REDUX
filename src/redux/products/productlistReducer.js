@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, DECREASE_PRODUCT_STOCK } from "./productlistType";
+import { ADD_PRODUCT, DECREASE_PRODUCT_STOCK, RESET_PRODUCTS } from "./productlistType";
 
 const initProduct = {
   numberOfProducts: 0,
@@ -18,6 +18,8 @@ const productlistReducer = (state = initProduct, action) => {
         ...state, 
         productArray: [...action.payload]
       };
+    case RESET_PRODUCTS:
+      return initProduct;
     default:
       return state;
   }

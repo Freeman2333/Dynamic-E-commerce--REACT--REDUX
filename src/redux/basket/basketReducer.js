@@ -7,7 +7,6 @@ const initOrder = {
 };
 
 const basketlistReducer = (state = initOrder, action) => {   
-
   switch (action.type) {
     case ADD_TO_BASKET:
       return {
@@ -25,8 +24,7 @@ const basketlistReducer = (state = initOrder, action) => {
       return initOrder;
     default:
       return state;
-  }
-  
+  }  
 };
 
 export default basketlistReducer;

@@ -1,10 +1,10 @@
 {
-  "products": [
+  "backeryProducts": [
     {
       "SKU": 1,
       "name": "Bannan Cake",
       "price": 12,
-      "stock": 1,
+      "stock": "1",
       "purchasedUnits": 0,
       "img": "https://www.averiecooks.com/wp-content/uploads/2016/08/upsidedownbananacake-8.jpg",
       "comment": "Some suger with a vitamine or two."
@@ -13,7 +13,7 @@
       "SKU": 2,
       "name": "Chocklad Cookie",
       "price": 12,
-      "stock": 44,
+      "stock": "44",
       "purchasedUnits": 0,
       "img": "https://www.lovetobeinthekitchen.com/wp-content/uploads/2016/01/Healthier-Monster-Cookies-1-new-edit-e1508561395506.jpg",
       "comment": "A little treat."
