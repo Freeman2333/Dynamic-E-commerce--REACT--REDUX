@@ -1,11 +1,15 @@
-import { ADD_PRODUCT, DECREASE_PRODUCT_STOCK, RESET_PRODUCTS } from "./productlistType";
+import {
+  ADD_PRODUCT,
+  DECREASE_PRODUCT_STOCK,
+  RESET_PRODUCTS
+} from "./productlistType";
 
 const initProduct = {
   numberOfProducts: 0,
   productArray: []
 };
 
-const productlistReducer = (state = initProduct, action) => {    
+const productlistReducer = (state = initProduct, action) => {
   switch (action.type) {
     case ADD_PRODUCT:
       return {
@@ -15,7 +19,7 @@ const productlistReducer = (state = initProduct, action) => {
       };
     case DECREASE_PRODUCT_STOCK:
       return {
-        ...state, 
+        ...state,
         productArray: [...action.payload]
       };
     case RESET_PRODUCTS:
