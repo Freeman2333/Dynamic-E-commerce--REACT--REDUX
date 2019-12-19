@@ -23,7 +23,9 @@ const productlistReducer = (state = initProduct, action) => {
         productArray: [...action.payload]
       };
     case RESET_PRODUCTS:
-      return initProduct;
+      return {
+        ...initProduct
+      };
     default:
       return state;
   }

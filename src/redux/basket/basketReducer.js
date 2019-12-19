@@ -16,7 +16,7 @@ const basketlistReducer = (state = initOrder, action) => {
       return {
         ...state,
         numberOfUnits: state.numberOfUnits + action.bought,
-        unitArray: [...state.unitArray, action.payload]
+        unitArray: state.unitArray.concat(action.payload)
       };
     case ADD_TO_BASKET_ITEM:
       return {
@@ -27,7 +27,9 @@ const basketlistReducer = (state = initOrder, action) => {
         )
       };
     case RESET_BASKET:
-      return initOrder;
+      return {
+        ...initOrder
+      };
     default:
       return state;
   }
