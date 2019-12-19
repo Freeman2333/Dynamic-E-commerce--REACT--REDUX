@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider } from "react-redux"; 
+import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -11,10 +11,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/home/Home";
 import Checkout from "./components/home/Checkout";
-import ChatIcon from "./components/chat/ChatIcon"; 
+import ChatIcon from "./components/chat/ChatIcon";
 
-function App() {  
-
+function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
