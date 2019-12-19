@@ -1,34 +1,23 @@
 import React, { useEffect } from "react";
 import { Card, ButtonGroup, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import PDP from "./PDP";
 import {
   decreaseProductStock,
   addToBasket,
   addToBasketItem
 } from "../../redux";
-import PDP from "./PDP";
 
 function PLP(props) {
   const item = props.product;
-
   const dispatch = useDispatch();
   const basketList = useSelector(state => state.basket);
-  const products = useSelector(state => state.productList);
-
-  const decreasingList = item => {
-    return products.productArray.map(el => {
-      if (el.SKU === item.SKU) {
-        el.stock -= 1;
-      }
-      return el;
-    });
-  };
 
   const handelDispatches = item => {
     if (item.stock !== 0) {
-      dispatch(decreaseProductStock(decreasingList(item)));
-
+      item.stock -= 1;
       item.purchasedUnits += 1;
+      dispatch(decreaseProductStock(item));
 
       basketList.unitArray.includes(item)
         ? dispatch(addToBasketItem(item, item.SKU))

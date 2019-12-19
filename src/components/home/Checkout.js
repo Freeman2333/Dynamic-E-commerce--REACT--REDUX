@@ -12,9 +12,7 @@ function Checkout() {
   const dispatch = useDispatch();
   const completeOrder = useSelector(state => state.basket);
   const stateBasket = completeOrder.unitArray;
-
   const browserBasket = JSON.parse(localStorage.getItem("Basket"));
-
   const emtyBasketText = "No items are in the basket yet ...";
 
   useEffect(() => {

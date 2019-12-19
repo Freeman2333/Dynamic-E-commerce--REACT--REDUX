@@ -20,11 +20,14 @@ const productlistReducer = (state = initProduct, action) => {
     case DECREASE_PRODUCT_STOCK:
       return {
         ...state,
-        productArray: [...action.payload]
+        productArray: state.productArray.map(item =>
+          item.SKU === action.id ? action.payload.stock - 1 : item
+        )
       };
     case RESET_PRODUCTS:
       return {
-        ...initProduct
+        ...state,
+        productArray: initProduct.productArray
       };
     default:
       return state;
