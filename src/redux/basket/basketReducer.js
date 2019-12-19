@@ -1,7 +1,8 @@
 import {
   ADD_TO_BASKET,
   RESET_BASKET,
-  ADD_TO_BASKET_ITEM
+  ADD_TO_BASKET_ITEM,
+  REMOVE_ROW
 } from "./basketlistType";
 
 const initOrder = {
@@ -25,6 +26,11 @@ const basketlistReducer = (state = initOrder, action) => {
         unitArray: state.unitArray.map(item =>
           item.SKU === action.id ? action.payload : item
         )
+      };
+    case REMOVE_ROW:
+      return {
+        ...state,
+        unitArray: state.unitArray.filter(item => item !== action.payload)
       };
     case RESET_BASKET:
       return {
