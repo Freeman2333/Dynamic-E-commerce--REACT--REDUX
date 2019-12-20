@@ -1,11 +1,11 @@
-import React from "react";  
-import { NavLink } from "react-router-dom";   
-import { Animated } from "react-animated-css"; 
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Animated } from "react-animated-css";
 import { Navbar, Badge } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
- const Navigation = () => {    
-  const stateBasket = useSelector(state => state.basket);   
+const Navigation = () => {
+  const stateBasket = useSelector(state => state.basket);
 
   return (
     <Navbar
@@ -14,7 +14,9 @@ import { useSelector } from "react-redux";
       style={{ minHeight: "100px" }}
     >
       <Animated animationIn="slideInDown">
-        <h3 className="font-weight-bold">Online Bakery</h3>
+        <NavLink className="text-dark text-decoration-none pr-3" to="/">
+          <h3 className="font-weight-bold">Online Bakery</h3>
+        </NavLink>
       </Animated>
 
       <Animated animationIn="slideInDown">
@@ -28,7 +30,8 @@ import { useSelector } from "react-redux";
           Contact
         </NavLink>
         <NavLink className="text-dark text-decoration-none pr-3" to="/checkout">
-          <i className="fa fa-lg fa-shopping-cart"
+          <i
+            className="fa fa-lg fa-shopping-cart"
             style={{ color: "darkcyan" }}
           ></i>
           <Badge pill variant="info">
