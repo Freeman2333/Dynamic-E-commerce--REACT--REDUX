@@ -13,7 +13,7 @@ const Navigation = () => {
       bg="light"
       style={{ minHeight: "100px" }}
     >
-      <Animated animationIn="slideInDown">
+      <Animated animationIn="slideInDown" className="d-flex">
         <NavLink className="text-dark text-decoration-none pr-3" to="/">
           <h3 className="font-weight-bold">Online Bakery</h3>
         </NavLink>
