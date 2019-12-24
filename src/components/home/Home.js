@@ -10,24 +10,24 @@ const Home = () => {
   const dispatch = useDispatch();
   const productList = useSelector(state => state.productList);
   const products = productList.productArray;
-  const [spinner, setSpinner] = useState(true);
-
+  const [spinner, setSpinner] = useState(true); 
   const loadData = JSON.parse(JSON.stringify(Goods));
 
-  useEffect(() => { 
-    setTimeout(() => {
-      setSpinner(false);
-    }, 3000);
-   
+  useEffect(() => {  
 
-    if (products.length === 0) {
-      loadData.productData.forEach(p => {
-        dispatch(addProduct(p));
-      });
-      
-      console.clear();
-    } 
-
+    if (products.length === 0) {    
+      loadData.productData.forEach(p => { 
+          dispatch(addProduct(p)); 
+          
+      }, setTimeout(() => {
+          /** 
+           * "setTimeout" is only use to emphasise the impact of the loader. 
+           * This callback works without as well. 
+           */
+          setSpinner(false);
+          console.clear();
+        }, 3000));   
+    }  
   }, []);
 
   return (

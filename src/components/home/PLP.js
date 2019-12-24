@@ -30,7 +30,11 @@ function PLP(props) {
 
   return (
     <Card className="text-center p-0 mt-4" style={{ width: "100%" }}>
-      <Card.Img variant="top" style={imgCard} src={item.img} />
+      <Card.Img
+        variant="top"  
+        style={imgCard} 
+        src={item.img} 
+      />
       <Card.Header>{item.name}</Card.Header>
       <Card.Body style={cardBody}>
         <Card.Text>
