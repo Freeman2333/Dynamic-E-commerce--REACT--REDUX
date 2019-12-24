@@ -6,31 +6,32 @@ import Goods from "../../data/products.json";
 import Loader from "../Loader";
 import PLP from "./PLP";
 
-const Home = () => {
-  const [spinner, setSpinner] = useState(true);
+const Home = () => { 
   const dispatch = useDispatch();
   const productList = useSelector(state => state.productList);
   const products = productList.productArray;
+  const [spinner, setSpinner] = useState(true);
 
   const loadData = JSON.parse(JSON.stringify(Goods));
 
-  useEffect(() => {
+  useEffect(() => { 
     setTimeout(() => {
       setSpinner(false);
     }, 3000);
+   
 
     if (products.length === 0) {
       loadData.productData.forEach(p => {
         dispatch(addProduct(p));
       });
-
+      
       console.clear();
-    }
+    } 
+
   }, []);
 
   return (
-    <Fragment>
-      {}
+    <Fragment> 
       <Loader show={spinner} />
       <Container className="d-flex justify-content-between flex-wrap">
         <Col xs={12} className="d-flex justify-content-center mt-4 bg-white">
