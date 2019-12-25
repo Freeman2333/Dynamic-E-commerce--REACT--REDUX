@@ -1,49 +1,26 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import Content from "../data/carousel.json";
 
-function Header() {
+function Header() { 
+  const loadContent = JSON.parse(JSON.stringify(Content));
+  const content = loadContent.carouselData;
+
   return (
     <Carousel style={carouselWrapper}>
-      <Carousel.Item>
-        <img
-          style={imgBackground}
-          className="d-block w-100"
-          src="https://ribbonsandballoons.com/frontassets/images/slider/1.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption style={captionBg}>
-          <h3 className="font-weight-bolder">CAKES</h3>
-          <p className="font-weight-bolder">Because you are worth it!</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          style={imgBackground}
-          className="d-block w-100"
-          src="https://www.nicewallpapers.net/background/muffins-color.jpg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption style={captionBg}>
-          <h3 className="font-weight-bolder">COOKIES</h3>
-          <p className="font-weight-bolder">
-            Because that is the way the cookies crumbles!
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          style={imgBackground}
-          className="d-block w-100"
-          src="https://preppykitchen.com/wp-content/uploads/2018/03/Blueberry-Lavendar-Muffins-feature.jpg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption style={captionBg}>
-          <h3 className="font-weight-bolder">MUFFINS</h3>
-          <p className="font-weight-bolder">Lev nu dö sen!</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+      {content.map((el, i) => ( 
+        <Carousel.Item key={i}>
+          <img
+            style={imgBackground}
+            className="d-block w-100"
+            src={el.img}
+          />
+          <Carousel.Caption style={captionBg}>
+            <h3 className="font-weight-bolder">{el.header}</h3>
+            <p className="font-weight-bolder">{el.comment}</p>
+          </Carousel.Caption>
+        </Carousel.Item>  
+      ))} 
     </Carousel>
   );
 }

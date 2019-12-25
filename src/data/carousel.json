@@ -1,0 +1,23 @@
+{
+    "carouselData": [
+      {
+        "id": 1,
+        "header": "CAKES", 
+        "comment": "Because you are worth it!",
+        "img": "https://ribbonsandballoons.com/frontassets/images/slider/1.jpg"
+      },
+      {
+        "id": 2,
+        "header": "COOKIES", 
+        "comment": "Because that is the way the cookies crumbles!",
+        "img": "https://www.nicewallpapers.net/background/muffins-color.jpg"
+      },
+      {
+        "id": 3,
+        "header": "MUFFINS", 
+        "comment": "Lev nu dö sen!",
+        "img": "https://preppykitchen.com/wp-content/uploads/2018/03/Blueberry-Lavendar-Muffins-feature.jpg"
+      }
+    ]
+  }
+  
