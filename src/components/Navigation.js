@@ -11,7 +11,7 @@ const Navigation = () => {
     <Navbar
       className="d-flex flex-wrap justify-content-between"
       bg="light"
-      style={{ minHeight: "100px" }}
+      style={navbar}
     >
       <Animated animationIn="slideInDown" className="d-flex">
         <NavLink className="text-dark text-decoration-none pr-3" to="/">
@@ -42,5 +42,15 @@ const Navigation = () => {
     </Navbar>
   );
 };
+
+const navbar = {
+  position: "fixed",
+  top: 0,
+  left: 0, 
+  width: "100%",
+  minHeight: "100px",
+  zIndex: "15",
+  boxShadow: "5px 5px 5px rgba(68,68,68,0.6)"
+}
 
 export default Navigation;

@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 function Header() {
   return (
-    <Carousel>
+    <Carousel style={carouselWrapper}>
       <Carousel.Item>
         <img
           style={imgBackground}
@@ -46,6 +46,10 @@ function Header() {
       </Carousel.Item>
     </Carousel>
   );
+}
+
+const carouselWrapper= {
+  marginTop: "100px"
 }
 
 const imgBackground = {
