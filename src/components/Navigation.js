@@ -9,34 +9,36 @@ const Navigation = () => {
 
   return (
     <Navbar
-      className="d-flex flex-wrap justify-content-between" 
+      className="d-flex flex-wrap" 
       style={navbar}
     >
-      <Animated animationIn="slideInDown" className="d-flex">
+      <Animated animationIn="slideInDown" className="d-flex justify-content-between col-12">
+
         <NavLink className="text-white text-decoration-none pr-3" to="/">
           <h3 className="font-weight-bold">Online Bakery</h3>
-        </NavLink>
-      </Animated>
+        </NavLink> 
 
-      <Animated animationIn="slideInDown">
-        <NavLink className="text-white text-decoration-none pr-3" to="/">
-          Home
-        </NavLink>
-        <NavLink className="text-white text-decoration-none pr-3" to="/about">
-          About
-        </NavLink>
-        <NavLink className="text-white text-decoration-none pr-3" to="/contact">
-          Contact
-        </NavLink>
-        <NavLink className="text-white text-decoration-none pr-3" to="/checkout">
-          <i
-            className="fa fa-lg fa-shopping-cart"
-            style={{ color: "darkcyan" }}
-          ></i>
-          <Badge pill variant="info">
-            {stateBasket.numberOfUnits}
-          </Badge>
-        </NavLink>
+        <div>
+          <NavLink className="text-white text-decoration-none pr-3" to="/">
+            Home
+          </NavLink>
+          <NavLink className="text-white text-decoration-none pr-3" to="/about">
+            About
+          </NavLink>
+          <NavLink className="text-white text-decoration-none pr-3" to="/contact">
+            Contact
+          </NavLink>
+          <NavLink className="text-white text-decoration-none pr-3" to="/checkout">
+            <i
+              className="fa fa-lg fa-shopping-cart"
+              style={{ color: "darkcyan" }}
+            ></i>
+            <Badge pill variant="info">
+              {stateBasket.numberOfUnits}
+            </Badge>
+          </NavLink>
+        </div> 
+
       </Animated>
     </Navbar>
   );
