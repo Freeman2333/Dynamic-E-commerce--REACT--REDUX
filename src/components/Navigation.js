@@ -9,27 +9,26 @@ const Navigation = () => {
 
   return (
     <Navbar
-      className="d-flex flex-wrap justify-content-between"
-      bg="light"
+      className="d-flex flex-wrap justify-content-between" 
       style={navbar}
     >
       <Animated animationIn="slideInDown" className="d-flex">
-        <NavLink className="text-dark text-decoration-none pr-3" to="/">
+        <NavLink className="text-white text-decoration-none pr-3" to="/">
           <h3 className="font-weight-bold">Online Bakery</h3>
         </NavLink>
       </Animated>
 
       <Animated animationIn="slideInDown">
-        <NavLink className="text-dark text-decoration-none pr-3" to="/">
+        <NavLink className="text-white text-decoration-none pr-3" to="/">
           Home
         </NavLink>
-        <NavLink className="text-dark text-decoration-none pr-3" to="/about">
+        <NavLink className="text-white text-decoration-none pr-3" to="/about">
           About
         </NavLink>
-        <NavLink className="text-dark text-decoration-none pr-3" to="/contact">
+        <NavLink className="text-white text-decoration-none pr-3" to="/contact">
           Contact
         </NavLink>
-        <NavLink className="text-dark text-decoration-none pr-3" to="/checkout">
+        <NavLink className="text-white text-decoration-none pr-3" to="/checkout">
           <i
             className="fa fa-lg fa-shopping-cart"
             style={{ color: "darkcyan" }}
@@ -50,7 +49,7 @@ const navbar = {
   width: "100%",
   minHeight: "100px",
   zIndex: "15",
-  boxShadow: "5px 5px 5px rgba(68,68,68,0.6)"
+  background: "rgba(0, 0, 0, 0.75)"
 }
 
 export default Navigation;
