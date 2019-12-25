@@ -8,7 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Carousels from "./components/Carousels";
 import Home from "./components/home/Home";
 import Checkout from "./components/home/Checkout";
 import ChatIcon from "./components/chat/ChatIcon";
@@ -17,8 +17,8 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navigation />
-        <Header />
+        <Navigation/>
+        <Carousels/>
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
@@ -26,8 +26,8 @@ function App() {
           <Route path="/checkout" component={Checkout} />
           <Route component={Error} />
         </Switch>
-        <Footer />
-        <ChatIcon />
+        <Footer/>
+        <ChatIcon/>
       </BrowserRouter>
     </Provider>
   );

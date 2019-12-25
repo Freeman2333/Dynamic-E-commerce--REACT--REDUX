@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import Content from "../data/carousel.json";
 
-function Header() { 
+function Carousels() { 
   const loadContent = JSON.parse(JSON.stringify(Content));
   const content = loadContent.carouselData;
 
@@ -46,4 +46,4 @@ const captionBg = {
   zIndex: 1
 };
 
-export default Header;
+export default Carousels;
