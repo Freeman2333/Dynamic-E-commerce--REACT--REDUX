@@ -53,6 +53,168 @@
       "purchasedUnits": 0,
       "img": "https://www.nicewallpapers.net/background/muffins-color.jpg",
       "comment": "For the child in you."
+    },
+    {
+      "SKU": 7,
+      "name": "Cinnamon Bun",
+      "price": 12,
+      "stock": 1,
+      "purchasedUnits": 0,
+      "img": "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2016/12/cinnamon-roll-cookies-3.jpg",
+      "comment": "Some suger with a vitamine or two."
+    },
+    {
+      "SKU": 8,
+      "name": "Politicly Correct Cake",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "https://goldbelly.imgix.net/uploads/merchant/main_image/546/carlos-bakery.0e2fc9e227e4808fb7d0f9566de189e7.jpg?ixlib=rails-3.0.2&w=1040&h=482",
+      "comment": "A little treat."
+    },
+    {
+      "SKU": 9,
+      "name": "Suger Cake",
+      "price": 12,
+      "stock": 20,
+      "purchasedUnits": 0,
+      "img": "",
+      "comment": "Light and fluffy."
+    },
+    {
+      "SKU": 10,
+      "name": "Crispy treat",
+      "price": 12,
+      "stock": 10,
+      "purchasedUnits": 0,
+      "img": "https://www.thebalancesmb.com/thmb/IP1hBllxJWvmtbVUffC5Cyxlkgw=/400x0/filters:no_upscale():max_bytes(150000):strip_icc()/DSC_0670-56a3096b5f9b58b7d0d02804.JPG",
+      "comment": "Antioxigent treat.."
+    },
+    {
+      "SKU": 11,
+      "name": "Flourless Chocolate Cake",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "https://simply-delicious-food.com/wp-content/uploads/2019/04/flourless-chocolate-cake-1.jpg",
+      "comment": "Rich and tasty."
+    },
+    {
+      "SKU": 12,
+      "name": "Croissant",
+      "price": 12,
+      "stock": 222,
+      "purchasedUnits": 0,
+      "img": "https://bakingamoment.com/wp-content/uploads/2019/02/IMG_2757-croissant-recipe-easy-720x720.jpg",
+      "comment": "For the child in you."
+    },
+    {
+      "SKU": 13,
+      "name": "",
+      "price": 12,
+      "stock": 1,
+      "purchasedUnits": 0,
+      "img": "",
+      "comment": "Some suger with a vitamine or two."
+    },
+    {
+      "SKU": 14,
+      "name": "Wild Berry Tart",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "http://www.countryfarerestaurant.com/sites/default/files/food/baked-goods.jpg",
+      "comment": "A little treat."
+    },
+    {
+      "SKU": 15,
+      "name": "Classic Cake Pops",
+      "price": 12,
+      "stock": 20,
+      "purchasedUnits": 0,
+      "img": "https://pixnio.com/free-images/2019/12/17/2019-12-17-15-14-30-1200x800.jpg",
+      "comment": "Light and fluffy."
+    },
+    {
+      "SKU": 16,
+      "name": "Cake Pop Waffel",
+      "price": 12,
+      "stock": 10,
+      "purchasedUnits": 0,
+      "img": "https://pixnio.com/free-images/2019/12/17/2019-12-17-15-19-04-1200x800.jpg",
+      "comment": "Antioxigent treat.."
+    },
+    {
+      "SKU": 17,
+      "name": "Fruit tart",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "https://i.pinimg.com/originals/5f/73/cf/5f73cf8db9a9412873896e069ccfbecd.jpg",
+      "comment": "Rich and tasty."
+    },
+    {
+      "SKU": 18,
+      "name": "Dame Judi Dench",
+      "price": 12,
+      "stock": 222,
+      "purchasedUnits": 0,
+      "img": "https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/50/2014/09/Cherry-Bakewells-mids-1.jpg",
+      "comment": "For the child in you."
+    },
+    {
+      "SKU": 19,
+      "name": "Star Coockie",
+      "price": 12,
+      "stock": 1,
+      "purchasedUnits": 0,
+      "img": "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/bbcgfo-1119_familychristmas-jammydodgers_33579.jpg",
+      "comment": "Some suger with a vitamine or two."
+    },
+    {
+      "SKU": 20,
+      "name": "Donuts",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "https://2bd7a77e373a9572610f-dba1f64a3f969774cdd587a3528671a8.ssl.cf1.rackcdn.com/medias/52249/select/DonutGIRESIZED.jpg?1501528255",
+      "comment": "A little treat."
+    },
+    {
+      "SKU": 21,
+      "name": "Love Macarons",
+      "price": 12,
+      "stock": 20,
+      "purchasedUnits": 0,
+      "img": "",
+      "comment": "Light and fluffy."
+    },
+    {
+      "SKU": 22,
+      "name": "Rum Cake",
+      "price": 12,
+      "stock": 10,
+      "purchasedUnits": 0,
+      "img": "https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/recipe_legacy/4587-3-large.jpg?itok=rBh6dBKP",
+      "comment": "Antioxigent treat.."
+    },
+    {
+      "SKU": 23,
+      "name": "Sheep muffins",
+      "price": 12,
+      "stock": 44,
+      "purchasedUnits": 0,
+      "img": "https://cdn.trendhunterstatic.com/thumbs/year-of-the-sheep.jpeg",
+      "comment": "Rich and tasty."
+    },
+    {
+      "SKU": 24,
+      "name": "Macarons",
+      "price": 12,
+      "stock": 222,
+      "purchasedUnits": 0,
+      "img": "https://www.seriouseats.com/assets_c/2010/04/20100414-ph-macarons-thumb-500x332-84143.jpg",
+      "comment": "For the child in you."
     }
   ]
 }
