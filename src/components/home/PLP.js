@@ -8,6 +8,7 @@ function PLP(props) {
   const item = props.product;
   const dispatch = useDispatch();
   const basketList = useSelector(state => state.basket); 
+  const fallBackImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikVhGsLPMUq5TInJ--3ossfcT7ZyDUFM9e0mOgSQN6TEHQugJ&s"
 
   const handelDispatches = item => { 
     if (item.stock !== 0) {
@@ -25,21 +26,20 @@ function PLP(props) {
   };
 
   useEffect(() => {  
-    localStorage.setItem("Basket", JSON.stringify(basketList));
+    localStorage.setItem("Basket", JSON.stringify(basketList)); 
   }, [basketList]);
 
   return (
-    <Card className="text-center p-0 mt-4" style={{ width: "100%" }}>
+    <Card id={item.SKU} className="text-center p-0 mt-4">
       <Card.Img
         variant="top"  
         style={imgCard} 
-        src={item.img} 
+        src={ (item.img.length === 0) ? fallBackImg : item.img } 
       />
       <Card.Header>{item.name}</Card.Header>
       <Card.Body style={cardBody}>
         <Card.Text>
-          We have <b>{item.stock}</b> items of <b>{item.name}</b> in stock for{" "}
-          <b>{item.price}kr</b> a piece.
+          We have <b>{item.stock}</b> items of <b>{item.name}</b> in stock for <b>{item.price}kr</b> a piece.
         </Card.Text>
         <small>{item.comment}</small>
         <ButtonGroup
